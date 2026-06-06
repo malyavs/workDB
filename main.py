@@ -1,9 +1,7 @@
 import pandas as pd
 
-# Прямая ссылка на CSV-файл на GitHub
-url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/tips.csv"
+# Вместо загрузки из URL мы читаем локальный файл
+local_df = pd.read_csv('tips_data.csv')
 
-# Загрузка занимает одну строчку
-df = pd.read_csv(url)
-
-print(df) # Показывает первые 5 строк таблицы
+# Теперь можно делать любые операции
+print(local_df)
