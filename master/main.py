@@ -12,4 +12,4 @@ def clean_file(file):
             for line in f2:
                 line=""
 if __name__ == '__main__':
-    copy_file('data.txt', 'tips_data.csv')
+    copy_file('info/data.txt', 'info/tips_data.csv')
