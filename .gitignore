@@ -1,3 +1,4 @@
 .idea
-tips_data.csv
-data.txt
+info/tips_data.csv
+info/data.txt
+__pycache__
