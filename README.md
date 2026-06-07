@@ -1,3 +1,4 @@
-trying to work with DB
-to try tests: 
+to try tests use
+
     python -m pytest
+
