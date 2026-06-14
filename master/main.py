@@ -10,11 +10,11 @@ def copy_file(new_file, old_file):
     """
     try:
         with open(old_file, 'r',encoding="UTF-8") as f:
-            with open(new_file, 'w') as f2:
+            with open(new_file, 'w',encoding="UTF-8") as f2:
                 for line in f:
                     f2.write(line)
     except (FileNotFoundError, FileExistsError) as e1:
-        raise ValueError(f"I don't have file {e1}")
+        raise ValueError(f"I don't have file {e1}") from e1
 def clean_file(file):
     """
     cleaning file
@@ -24,8 +24,8 @@ def clean_file(file):
     try:
         with open(file, 'w',encoding="UTF-8") as f:
             f.write('')
-    except (FileNotFoundError, FileExistsError) as e:
-        raise ValueError(f"I don't have file {e}")
+    except (FileNotFoundError, FileExistsError):
+        raise ValueError(f"I don't have file {f}") from f
 def main():
     """
     main function
